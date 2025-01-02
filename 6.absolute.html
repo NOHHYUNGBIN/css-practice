@@ -13,6 +13,7 @@
         background-color: darkslategray;
       }
       .box {
+        position: relative;
         width: 80%;
         height: 80%;
         padding: 20px;
@@ -27,6 +28,12 @@
       }
       .inner2 {
         background-color: palegoldenrod;
+        /* absolute 기존문서 flow에서 빠져나오고 기존의 컨텐츠들이 재배치가 일어난다.*/
+        /* absolute가 가진 부모요소 중에 position이 static이 아닌 부모를 따른다. (기본값이 static)*/
+        /* 따르고 싶은 부모를 지정하고싶은 경우 부모스타일에 position을 relative 속성을 주면 된다.*/
+        position: absolute;
+        top: 80px;
+        left: 100px;
       }
       .inner3 {
         background-color: darkseagreen;
